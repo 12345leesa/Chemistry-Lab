@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body class="Calculator-page">
+    <header class="navbar navbar-expand-lg">
+       <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="images/download (1).png" alt="ChemistryHub Logo" style="height: 50px; margin-right: 5px;">
+        </a>
+           <a href="#" class="navbar-brand">Element Edge</a>
+           <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item"><a href="home.html" class="nav-link"><b>Home</b></a></li>
+                   <li class="nav-item"><a href="Inorganic.html" class="nav-link"><b>Inorganic</b></a></li>
+                   <li class="nav-item dropdown">
+                       <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"></a>
+                       <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                           <a href="block.html" class="dropdown-item">block</a>
+                           <a href="Sblock.html" class="dropdown-item">S block</a>
+                           <a href="Pblock.html" class="dropdown-item">P block</a>
+                           <a href="Dblock.html" class="dropdown-item">D block</a>
+                       </div>
+                   </li>
+                   <li class="nav-item"><a href="Organic.html" class="nav-link"><b>Organic</b></a></li>
+                   <li class="nav-item"><a href="Periodic Table.html" class="nav-link"><b>Periodic Table</b></a></li>
+                   <li class="nav-item"><a href="Calculator.html" class="nav-link"><b>Calculator</b></a></li>
+                   <li class="nav-item"><a href="Play.html" class="nav-link"><b>Let's Play</b></a></li>
+               </ul>
+           </div>
+
+           
+
+       </div>
+   </header>
+ 
+   <br>
+
+  
+   <div class="calculator">
+    <div class="display">
+        <input type="text" id="display" disabled>
+    </div>
+    <div class="buttons">
+        <button class="btn" onclick="appendToDisplay('7')">7</button>
+        <button class="btn" onclick="appendToDisplay('8')">8</button>
+        <button class="btn" onclick="appendToDisplay('9')">9</button>
+        <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+
+        <button class="btn" onclick="appendToDisplay('4')">4</button>
+        <button class="btn" onclick="appendToDisplay('5')">5</button>
+        <button class="btn" onclick="appendToDisplay('6')">6</button>
+        <button class="btn operator" onclick="appendToDisplay('*')">*</button>
+
+        <button class="btn" onclick="appendToDisplay('1')">1</button>
+        <button class="btn" onclick="appendToDisplay('2')">2</button>
+        <button class="btn" onclick="appendToDisplay('3')">3</button>
+        <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+
+        <button class="btn" onclick="appendToDisplay('0')">0</button>
+        <button class="btn" onclick="appendToDisplay('.')">.</button>
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+
+        <button class="btn" onclick="calculate()">=</button>
+
+        <!-- Trigonometric Functions -->
+        <button class="btn" onclick="appendToDisplay('sin(')">sin</button>
+        <button class="btn" onclick="appendToDisplay('cos(')">cos</button>
+        <button class="btn" onclick="appendToDisplay('tan(')">tan</button>
+    </div>
+</div>
+
+   
+
+   <img src="images/girl-cartoon-character-holding-calculator_1639-47660-removebg-preview.png" alt="Calculator Image" class="calculator-image">
+
+   <div class="calculators-container">
+    
+    <div class="ideal-gas-law-calculator">
+      <h2>Ideal Gas Law Calculator (PV = nRT)</h2>
+      <div class="ideal-display-box">
+        <input type="number" id="pressure" placeholder="Pressure (P) in atm">
+        <input type="number" id="volume" placeholder="Volume (V) in liters">
+        <input type="number" id="molesIdeal" placeholder="Moles (n)">
+        <input type="number" id="temperature" placeholder="Temperature (T) in K">
+      </div>
+      <div class="ideal-buttons">
+        <button onclick="calculatePressure()">Calculate P</button>
+        <button onclick="calculateVolume()">Calculate V</button>
+        <button onclick="calculateMolesIdeal()">Calculate n</button>
+        <button onclick="calculateTemperature()">Calculate T</button>
+      </div>
+      <div class="ideal-result" id="ideal-result"></div>
+    </div>
+  
+   
+    <div class="mn-calculator">
+      <h2>Mass Calculator (m = Mn)</h2>
+      <div class="mn-display-box">
+        <input type="number" id="mass" placeholder="Mass (m) in grams" >
+        <input type="number" id="molarMass" placeholder="Molar Mass (M) in g/mol">
+        <input type="number" id="molesMn" placeholder="Moles (n)">
+      </div>
+      <div class="mn-buttons">
+        <button onclick="calculateMass()">Calculate m</button>
+        <button onclick="calculateMolarMass()">Calculate M</button>
+        <button onclick="calculateMolesMn()">Calculate n</button>
+      </div>
+      <div class="mn-result" id="mn-result"></div>
+    </div>
+  
+   
+    <div class="cv-calculator">
+      <h2>Concentration Calculator (C=n/v)</h2>
+      <div class="cv-display-box">
+        <input type="number" id="concentration" placeholder="Concentration (C) in mol/L" >
+        <input type="number" id="molesCv" placeholder="Moles (n) in mol">
+        <input type="number" id="volume" placeholder="Volume (v) in L">
+      </div>
+      <div class="cv-buttons">
+        <button onclick="calculateConcentration()">Calculate C</button>
+        <button onclick="calculateMolesCv()">Calculate n</button>
+        <button onclick="calculateVolume()">Calculate v</button>
+      </div>
+      <div class="cv-result" id="cv-result"></div>
+    </div>
+</div>
+
+<br>
+
+<div class="welcome-container">
+    <div class="scientist-container">
+        <img src="images/war.png" alt="Scientist" class="scientist-img">
+    </div>
+    <div class="clip-cloud">
+        <p class="use-message"> 
+            <span class="typed-text"></span>
+            Save time with our calculators and converters they're here to help you tackle complex chemistry problems effortlessly! But remember, during exams, it's all you so practice well and use these tools as your study partners!
+        </p>
+    </div>
+</div>
+  
+
+  
+
+  <footer>
+       <div class="footer">
+           <div class="container">
+               <div class="row">
+                  
+                   <div class="col-md-8 offset-md-2">
+                       <h3>Follow Us</h3>
+                       <ul class="social_icon">
+                           <center>
+                               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                               <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                               <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                           </center>
+                       </ul>
+
+                       <div class="conta">
+                           <ul>
+                               <center>
+                                <li><a href="#"><i class="fas fa-phone"></i> 0812342891</a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i> ElementEdge@gmail.com</a></li>
+                               </center>
+                           </ul>
+                       </div>
+                   </div>
+
+                   
+                   <div class="col-md-8 offset-md-2">
+                       <div class="menu_bottom">
+                           <ul>
+                               <center> 
+                                <li><a href="home.html"><i class="fas fa-home"></i> <b>home</b></a></li>
+                                <li><a href="Inorganic.html"><i class="fas fa-flask"></i> <b>Inorganic</b></a></li>
+                                <li><a href="Organic.html"><i class="fas fa-atom"></i> <b>Organic</b></a></li>
+                                <li><a href="Periodic Table.html"><i class="fas fa-table"></i> <b>Periodic table</b></a></li>
+                                <li><a href="Calculator.html"><i class="fas fa-calculator"></i> <b>Calculator</b></a></li>
+                               </center>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+  
+</body>
+</html>

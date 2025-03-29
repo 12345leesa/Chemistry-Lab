@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+   
+
+    
+
+</head>
+<body class="block-page">
+<header class="navbar navbar-expand-lg">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="images/download (1).png" alt="ChemistryHub Logo" style="height: 50px; margin-right: 5px;"> 
+        </a>
+        <a href="#" class="navbar-brand">Element Edge</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="home.html" class="nav-link"><b>Home</b></a></li>
+                <li class="nav-item"><a href="Inorganic.html" class="nav-link"><b>Inorganic</b></a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><b></b></a>
+                    <div class="dropdown-menu">
+                        <a href="block.html" class="dropdown-item">block</a>
+                        <a href="Sblock.html" class="dropdown-item">S block</a>
+                        <a href="Pblock.html" class="dropdown-item">P block</a>
+                        <a href="Dblock.html" class="dropdown-item">D block</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="Organic.html" class="nav-link"><b>Organic</b></a></li>
+                <li class="nav-item"><a href="Periodic Table.html" class="nav-link"><b>Periodic Table</b></a></li>
+                <li class="nav-item"><a href="Calculator.html" class="nav-link"><b>Calculator</b></a></li>
+                <li class="nav-item"><a href="Play.html" class="nav-link"><b>Let's Play</b></a></li>
+            </ul>
+        </div>
+
+        <div class="user-welcome">
+            <div class="user-avatar" id="user-avatar"></div>
+            <span id="user-name"></span>
+            <button class="auth-btn" id="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+</header>
+
+<div class="container mt-4">
+    <h4>Chemistry Color Search</h4>
+    <br><br>
+    
+    <div class="section" id="compoundsSection">
+        <div class="section-title">Compounds</div>
+        <div class="search-container">
+            <input type="text" id="compoundsSearch" placeholder="Search Compounds by Name or Symbol" onkeyup="searchColor('compounds')">
+        </div>
+        <div class="result" id="compoundsResult">
+            <span class="color-box" id="compoundsColorBox"></span>
+            <span id="compoundsResultText"></span>
+        </div>
+    </div>
+
+    <div class="section" id="anionsSection">
+        <div class="section-title">Anions</div>
+        <div class="search-container">
+            <input type="text" id="anionsSearch" placeholder="Search Anions by Name or Symbol" onkeyup="searchColor('anions')">
+        </div>
+        <div class="result" id="anionsResult">
+            <span class="color-box" id="anionsColorBox"></span>
+            <span id="anionsResultText"></span>
+        </div>
+    </div>
+    
+
+    
+    <div class="section" id="cationsSection">
+        <div class="section-title">Cations</div>
+        <div class="search-container">
+            <input type="text" id="cationsSearch" placeholder="Search Cations by Name or Symbol" onkeyup="searchColor('cations')">
+        </div>
+        <div class="result" id="cationsResult">
+            <span class="color-box" id="cationsColorBox" style="display: inline-block; width: 50px; height: 50px; border: 1px solid #000;"></span>
+            <span id="cationsResultText"></span>
+        </div>
+    </div>
+</div>
+
+
+
+<br> <br>
+    
+<h6 class="h7-style"><b>Safety Guidelines</b></h6>
+<div class="carousel-container">
+   
+    <br> <br>
+    <div id="safetyCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/safety01.jpg" class="d-block" alt="Safety Guideline 1">
+                <div class="carousel-caption">
+                    <h3>Wear PPE</h3>
+                    <center>
+                    <p>Wearing appropriate PPE, such as gloves, goggles, and lab coats, is a fundamental aspect of safety in hazardous environments. It protects workers from a variety of risks, ensuring their health and safety while promoting a culture of safety in the workplace. Always assess the specific risks associated with the job and select the appropriate PPE accordingly.</p>
+                    </center>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/safety02.jpg" class="d-block" alt="Safety Guideline 2">
+                <div class="carousel-caption">
+                    <h3>Maintain Cleanliness</h3>
+                    <p>Maintaining clean and organized work areas is essential for safety, efficiency, and overall workplace morale. By implementing best practices and fostering a culture of cleanliness, organizations can significantly reduce the risk of accidents and spills while promoting a productive and positive environment for all employees.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/safety03.jpg" class="d-block" alt="Safety Guideline 3">
+                <div class="carousel-caption">
+                    <h3>Know Emergency Equipment</h3>
+                    <p>Knowing the location and proper use of safety equipment like fire extinguishers, eye wash stations, and emergency showers is critical in preventing and responding to emergencies. By fostering a culture of safety and ensuring that employees are well-informed and trained, organizations can significantly enhance workplace safety and reduce the risk of injury or damage.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/21.jpeg" class="d-block" alt="Safety Guideline 4">
+                <div class="carousel-caption">
+                    <h3>Handle Pipettes with Care</h3>
+        <p>Use pipette bulbs or pumps instead of mouth pipetting to avoid exposure to harmful chemicals. Clean pipettes properly after use and store them in designated holders.</p>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#safetyCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#safetyCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-8 offset-md-2">
+                    <h3>Follow Us</h3>
+                    <ul class="social_icon">
+                        <center>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </center>
+                    </ul>
+
+                    <div class="conta">
+                        <ul>
+                            <center>
+                                <li><a href="#"><i class="fas fa-phone"></i> 0812342891</a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i> ElementEdge@gmail.com</a></li>
+                            </center>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-8 offset-md-2">
+                    <div class="menu_bottom">
+                        <ul>
+                            <center> 
+                                <li><a href="home.html"><i class="fas fa-home"></i> <b>home</b></a></li>
+                                <li><a href="Inorganic.html"><i class="fas fa-flask"></i> <b>Inorganic</b></a></li>
+                                <li><a href="Organic.html"><i class="fas fa-atom"></i> <b>Organic</b></a></li>
+                                <li><a href="Periodic Table.html"><i class="fas fa-table"></i> <b>Periodic table</b></a></li>
+                                <li><a href="Calculator.html"><i class="fas fa-calculator"></i> <b>Calculator</b></a></li>
+                            </center>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

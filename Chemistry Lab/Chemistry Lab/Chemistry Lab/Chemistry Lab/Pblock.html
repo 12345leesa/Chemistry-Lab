@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body class="Pblock-page">
+   <header class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="images/download (1).png" alt="ChemistryHub Logo" style="height: 50px; margin-right: 5px;"> 
+        </a>
+          <a href="#" class="navbar-brand">Element Edge</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a href="home.html" class="nav-link"><b>Home</b></a></li>
+                  <li class="nav-item"><a href="Inorganic.html" class="nav-link"><b>Inorganic</b></a></li>
+                  <li class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"></a>
+                      <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                          <a href="block.html" class="dropdown-item">block</a>
+                          <a href="Sblock.html" class="dropdown-item">S block</a>
+                          <a href="Pblock.html" class="dropdown-item">P block</a>
+                          <a href="Dblock.html" class="dropdown-item">D block</a>
+                      </div>
+                  </li>
+                  <li class="nav-item"><a href="Organic.html" class="nav-link"><b>Organic</b></a></li>
+                  <li class="nav-item"><a href="Periodic Table.html" class="nav-link"><b>Periodic Table</b></a></li>
+                  <li class="nav-item"><a href="Calculator.html" class="nav-link"><b>Calculator</b></a></li>
+                  <li class="nav-item"><a href="Play.html" class="nav-link"><b>Let's Play</b></a></li>
+              </ul>
+          </div>
+
+          <div class="user-welcome">
+            <div class="user-avatar" id="user-avatar"></div>
+            <span id="user-name"></span>
+            <button class="auth-btn" id="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+      </div>
+  </header>
+
+  <br>
+
+  <h1>P Block</h1>
+
+<br>
+
+  <div class="grid-container">
+    <div class="card">
+        <h2>Location in the Periodic Table</h2>
+        <ul>
+            <li><strong>Groups 13-18:</strong> P-block elements include boron, carbon, nitrogen, oxygen, halogens, and noble gases.</li>
+            <li>Their outermost electrons are in the <strong>p-orbital</strong> (e.g., Group 13: ns² np¹, Group 14: ns² np²).</li>
+            <li>Includes **metals, metalloids, and nonmetals**, making it the most diverse block.</li>
+        </ul>
+
+        <h2>P block elements -></h2>
+        
+        <ul>
+            B (Boron),
+            Al (Aluminum),
+            Ga	(Gallium),
+            In	(Indium),
+            Tl	(Thallium),
+            Nh	(Nihonium),
+         	C	(Carbon),
+            Si	(Silicon),
+            Ge	(Germanium),
+            Sn	(Tin),
+            Pb	(Lead),
+            Fl	(Flerovium),
+        	N	(Nitrogen),
+            P	(Phosphorus),
+            As	(Arsenic),
+            Sb	(Antimony),
+            Bi	(Bismuth),
+            Mc	(Moscovium),
+            O	(Oxygen),
+            S	(Sulfur),
+            Se	(Selenium),
+            Te	(Tellurium),
+            Po	(Polonium),
+            Lv	(Livermorium),
+            F	(Fluorine),
+            Cl	(Chlorine),
+            Br	(Bromine),
+            I	(Iodine),
+            At	(Astatine),
+            Ts	(Tennessine),
+            He	(Helium),
+            Ne	(Neon),
+            Ar	(Argon),
+            Kr	(Krypton),
+            Xe	(Xenon),
+            Rn	(Radon),
+            Og	(Oganesson),
+
+        </ul>
+
+
+    </div>
+
+    <div class="card">
+        <h2>Key Characteristics</h2>
+        <ul>
+            <li>Group 13: Ends with <strong>ns² np¹</strong> (e.g., Boron: 1s² 2s² 2p¹).</li>
+            <li>Group 14: Ends with <strong>ns² np²</strong> (e.g., Carbon: 1s² 2s² 2p²).</li>
+            <li>Group 15: Ends with <strong>ns² np³</strong> (e.g., Nitrogen: 1s² 2s² 2p³).</li>
+            <li>Group 16: Ends with <strong>ns² np⁴</strong> (e.g., Oxygen: 1s² 2s² 2p⁴).</li>
+            <li>Group 17: Ends with <strong>ns² np⁵</strong> (e.g., Fluorine: 1s² 2s² 2p⁵).</li>
+            <li>Group 18: Ends with <strong>ns² np⁶</strong> (e.g., Neon: 1s² 2s² 2p⁶).</li>
+            <li><strong>Reactivity:</strong> 
+                <ul>
+                    <li>Decreases down the group for nonmetals (e.g., fluorine is more reactive than iodine).</li>
+                    <li>Increases down the group for metals (e.g., thallium is more reactive than boron).</li>
+                </ul>
+            </li>
+            <li><strong>Oxidation States:</strong> Vary across groups (e.g., Group 14: +4 or -4, Group 17: -1).</li>
+            <li><strong>Physical Properties:</strong> Includes gases (oxygen, nitrogen), liquids (bromine), and solids (carbon, phosphorus).</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Trends in the Groups</h2>
+        <ul>
+            <li><strong>Atomic Radius:</strong> Increases down a group.</li>
+            <li><strong>Ionization Energy:</strong> Decreases down a group.</li>
+            <li><strong>Electronegativity:</strong> Decreases down the group for nonmetals.</li>
+            <li><strong>Melting/Boiling Points:</strong> Vary significantly (e.g., noble gases have low boiling points).</li>
+        </ul>
+    </div>
+</div>
+
+<br>
+
+
+<div class="image-container">
+    <div class="image-item">
+        <h6>conceptual map</h6>
+        <a href="#image1"><img src="images/pblock map.jpg" alt="" width="200"></a>
+    </div>
+    <div class="image-item">
+        <h6>13 block </h6>
+        <a href="#image2"><img src="images/Pmap 13.avif" alt="" width="200"></a>
+    </div>
+    <div class="image-item">
+        <h6>14 block</h6>
+        <a href="#image3"><img src="images/pmap 14.avif" alt="" width="200"></a>
+    </div>
+    <div class="image-item">
+        <h6>Trend</h6>
+        <a href="#image4"><img src="images/pblock trends2.png" alt="" width="200"></a>
+    </div>
+    <div class="image-item">
+        <h6>Trend</h6>
+        <a href="#image5"><img src="images/pblock trends03.png" alt="" width="200"></a>
+    </div>
+    <div class="image-item">
+        <h6>Elements</h6>
+        <a href="#image6"><img src="images/p-block-elements.png" alt="" width="150"></a>
+    </div>
+
+</div>
+
+
+
+<div id="image1" class="pmodal">      
+    <a href="#"><img src="images/pblock map.jpg" alt="map"></a>
+</div>
+
+<div id="image2" class="pmodal">
+    <a href="#"><img src="images/Pmap 13.avif" alt=""></a>
+</div>
+
+<div id="image3" class="pmodal">      
+    <a href="#"><img src="images/pmap 14.avif" alt=""></a>
+</div>
+
+<div id="image4" class="pmodal">      
+    <a href="#"><img src="images/pblock trends2.png" alt=""></a>
+</div>
+
+<div id="image5" class="pmodal">      
+    <a href="#"><img src="images/pblock trends03.png" alt=""></a>
+</div>
+
+<div id="image6" class="pmodal">      
+    <a href="#"><img src="images/p-block-elements.png" alt=""></a>
+</div>
+
+
+
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-8 offset-md-2">
+                    <h3>Follow Us</h3>
+                    <ul class="social_icon">
+                        <center>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </center>
+                    </ul>
+
+                    <div class="conta">
+                        <ul>
+                            <center>
+                                <li><a href="#"><i class="fas fa-phone"></i> 0812342891</a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i> ElementEdge@gmail.com</a></li>
+                            </center>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-8 offset-md-2">
+                    <div class="menu_bottom">
+                        <ul>
+                            <center> 
+                                <ul>
+                                    <li><a href="home.html"><i class="fas fa-home"></i> <b>home</b></a></li>
+                                    <li><a href="Inorganic.html"><i class="fas fa-flask"></i> <b>Inorganic</b></a></li>
+                                    <li><a href="Organic.html"><i class="fas fa-atom"></i> <b>Organic</b></a></li>
+                                    <li><a href="Periodic Table.html"><i class="fas fa-table"></i> <b>Periodic table</b></a></li>
+                                    <li><a href="Calculator.html"><i class="fas fa-calculator"></i> <b>Calculator</b></a></li>
+                                </ul>
+                                
+                            </center>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+ 
+ 
+</body>
+</html>

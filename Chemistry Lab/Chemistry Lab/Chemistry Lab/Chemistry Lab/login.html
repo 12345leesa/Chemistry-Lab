@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementEdge Login & Register</title>
+   
+    <style>
+        body {
+            margin: 1;
+            padding: 1;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        
+        
+        .go-home-btn {
+            background-color: navy;
+            color: white;
+            border: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+        .go-home-btn::before {
+            content: "←";
+            margin-right: 5px;
+        }
+        
+        .container {
+            display: flex;
+            min-height: calc(100vh - 100px);
+            background-image: url('images/loging.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .chemistry-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.8;
+            background-color: rgba(0, 0, 20, 0.7);
+        }
+        
+        
+        
+        .formula-1 {
+            top: 20%;
+            left: 10%;
+        }
+        
+        .formula-2 {
+            bottom: 30%;
+            left: 5%;
+        }
+        
+        .formula-3 {
+            top: 10%;
+            right: 15%;
+        }
+        
+        .formula-4 {
+            bottom: 10%;
+            right: 10%;
+        }
+        
+        .login-box, .register-box {
+            background-color: #fffbd6;
+            border-radius: 8px;
+            padding: 20px;
+            width: 350px;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: auto;
+            
+        }
+        
+        .register-box {
+            margin-right: 50px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        select {
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #0f0c8c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #1a1a9f;
+        }
+        
+        .link-text {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .link-text a {
+            color: #0f0c8c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .auth-required {
+   
+            text-decoration: none;
+            color: white;
+        }
+
+        .form-check-input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: navy; 
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .login-box, .register-box {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+      
+    </div>
+    
+    
+    <br>
+    <div class="navigation-bar">
+
+        <button class="go-home-btn" onclick="location.href='home.html'">🏠 Go to Home</button>
+       
+    </div>
+
+    <br>
+    
+    <div class="container">
+        
+        
+        
+        <div class="login-box">
+            <div class="header">
+                <h2>Login to Your Account</h2>
+                <p>Welcome back! Please login to continue your journey in the ElementEdge</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                    <a href="#" class="float-right">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="link-text">Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+        
+        <div class="register-box" style="display: none;">
+            <div class="header">
+                <h2>Create an Account</h2>
+                <p>Join us and explore the exciting world of chemistry!</p>
+            </div>
+           
+            <form id="registerForm">
+                <div class="form-group">
+                    <input type="text" id="registerUsername" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="registerIndexNo" placeholder="Index No" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <select id="userRole" required>
+                        <option value="" disabled selected>Select Role</option>
+                        <option value="student">🎓 Student</option>
+                        <option value="teacher">👨‍🏫 Teacher</option>
+                    </select>    
+                </div>
+
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="termsAgree" required>
+                    <label class="form-check-label" for="termsAgree">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p class="link-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const loginBox = document.querySelector('.login-box');
+    const registerBox = document.querySelector('.register-box');
+    const showRegisterLink = document.getElementById('showRegister');
+    const showLoginLink = document.getElementById('showLogin');
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const goHomeBtn = document.querySelector('.go-home-btn');
+    
+    // Toggle between login and register forms
+    showRegisterLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        loginBox.style.display = 'none';
+        registerBox.style.display = 'block';
+    });
+    
+    showLoginLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        registerBox.style.display = 'none';
+        loginBox.style.display = 'block';
+    });
+    
+    // Handle login form submission
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+
+        fetch("http://localhost:3000/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Login successful! Redirecting to home page...');
+                // Redirect or take other actions on successful login
+            } else {
+                alert('Invalid credentials!');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
+
+    // Handle registration form submission
+    registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('registerUsername').value;
+        const indexNo = document.getElementById('registerIndexNo').value;
+        const password = document.getElementById('registerPassword').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        const userRole = document.getElementById('userRole').value;
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+
+        if (!userRole) {
+            alert('Please select a role!');
+            return;
+        }
+
+        fetch("http://localhost:3000/register", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, indexNo, password, userRole })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Registration successfully completed! You can now login.');
+                // Redirect to login page or perform other actions
+            } else {
+                alert('Error during registration!');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        });
+    });
+
+    // After successful login
+function handleLogin(data) {
+    if (data.success) {
+        // Store token and user info
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('username', data.user.username);
+        localStorage.setItem('userRole', data.user.userRole);
+
+        // Redirect or update UI
+        window.location.href = 'home.html';
+    }
+}
+
+// For making authenticated requests
+function makeAuthenticatedRequest(url, method = 'GET', body = null) {
+    const token = localStorage.getItem('token');
+    
+    return fetch(url, {
+        method,
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: body ? JSON.stringify(body) : null
+    });
+}
+
+    // Go home button functionality
+    goHomeBtn.addEventListener('click', function() {
+        window.location.href = 'home.html';
+    });
+});
+        
+   </script>
+
+</body>
+</html>
+

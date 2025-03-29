@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="auth.js"></script>
+</head>
+
+
+
+
+<body class="home-page">
+   <header class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+         <img src="images/download (1).png" alt="ChemistryHub Logo" style="height: 50px; margin-right: 5px;"> 
+        </a>
+          <a href="#" class="navbar-brand">Element Edge</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="home.html" class="nav-link"><b>Home</b></a></li>
+                <li class="nav-item protected-link"><a href="Inorganic.html" class="nav-link"><b>Inorganic</b></a></li>
+                <li class="nav-item dropdown protected-link">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><b></b></a>
+                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                        <a href="block.html" class="dropdown-item">block</a>
+                        <a href="Sblock.html" class="dropdown-item">S block</a>
+                        <a href="Pblock.html" class="dropdown-item">P block</a>
+                        <a href="Dblock.html" class="dropdown-item">D block</a>
+                    </div>
+                </li>
+                <li class="nav-item protected-link"><a href="Organic.html" class="nav-link"><b>Organic</b></a></li>
+                <li class="nav-item protected-link"><a href="Periodic Table.html" class="nav-link"><b>Periodic Table</b></a></li>
+                <li class="nav-item protected-link"><a href="Calculator.html" class="nav-link"><b>Calculator</b></a></li>
+                <li class="nav-item protected-link"><a href="Play.html" class="nav-link"><b>Let's Play</b></a></li>
+                
+                <li class="nav-item auth-status" id="authStatusContainer">
+                    <a href="login.html" class="nav-link" id="loginLink"></a>
+                    <a href="register.html" class="nav-link" id="registerLink"></a>
+                </li>
+
+                <li class="nav-item d-none" id="logoutItem">
+                    <a href="#" class="nav-link text-danger" id="logoutBtn"><b>Logout</b></a>
+                </li>
+
+            </ul>
+
+            <div class="user-welcome">
+                <div class="user-avatar" id="user-avatar"></div>
+                <span id="user-name"></span>
+                <button class="auth-btn" id="logout-btn" onclick="logout()">Logout</button>
+            </div>
+
+        </div>
+  </header>
+  
+
+  <br>
+
+  <div class="container">
+    <center>
+    <br>
+    <h4>Welcome to Element Edge</h4>
+   </center>
+ </div>    
+  
+    <div class="welcome-container">
+        <div class="einstein-container">
+            <img src="images/image (2).png" alt="Albert Einstein" class="einstein-img">
+        </div>
+        <div class="speech-bubble">
+            <p class="welcome-message"> 
+                <span class="typed-text"></span>We invite you to embark on an exciting journey through the world of chemistry, where every experiment opens the door to new discoveries. Unleash your curiosity and dive into hands-on activities that make science fun and engaging. Join us as we explore the wonders of chemistry together!</span>
+            </p>
+
+        </div>
+    </div>
+    
+    <center>
+        <br><br>
+        <button class="explore-btn" onclick="location.href='login.html'"> Login</button> 
+        <button class="explore-btn" onclick="location.href='login.html'"> Register</button> 
+    </center>
+
+    <h1>🔬 Explore Chemistry Features 🔬</h1>
+
+    <br>
+    <br>
+
+    <div class="cards-container">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="symbol">🔥</div>
+                    <home-page-h1>Flame Test</home-page-h1>
+                </div>
+                <div class="flip-card-back">
+                    <p>The flame test is a qualitative analysis technique used to identify metal ions based on their characteristic flame colors.When a metal salt is heated in a flame, its electrons get excited and release energy as visible light.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="symbol">🧪</div>
+                    <home-page-h1>  Inorganic Chemistry</home-page-h1>
+                </div>
+                <div class="flip-card-back">
+                    <p>Chemical reactions involve the breaking and forming of chemical bonds to create new substances. Types of reactions include synthesis, decomposition, single displacement, double displacement, and combustion.</p>
+                </div>
+            </div>
+        </div>   
+        
+    
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="symbol">⚛️</div>
+                    <home-page-h4>Organic Chemistry</home-page-h4>
+                </div>
+                <div class="flip-card-back">
+                    <p> Theory: Organic chemistry is the study of carbon-containing compounds, primarily focused on hydrocarbons and their derivatives.<br>History: Organic chemistry evolved from the belief that organic compounds could only be produced by living organisms (vitalism theory) until the synthesis of urea by Friedrich Wöhler in 1828, proving that organic compounds could be synthesized in the lab.<br>Key Concepts: Functional groups, reactions like substitution, addition, and elimination, isomerism, and stereochemistry are core topics.</p>
+                </div> 
+            </div>
+        </div>
+    
+    
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="symbol">📖</div>
+                    <home-page-h4>Study Materials</home-page-h4>
+                </div>
+                <div class="flip-card-back">
+                    <p>Conceptual Maps: Learn through visual aids like conceptual maps and diagrams to understand complex topics better.<br>Study Resources: Access a range of tutorials, practice problems, video lessons, and PDFs.<br>Images for Learning: Visualize concepts through images, reaction mechanisms, and charts to make learning more engaging.</p>
+                </div>
+            </div>
+        </div>
+        
+    
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="symbol">🎮</div>
+                    <home-page-h4>Play Quiz</home-page-h4>
+                </div>
+                <div class="flip-card-back">
+                    <p> <br>Test your knowledge with interactive chemistry quizzes.<br>Have Fun: Engage in interactive quizzes that challenge your knowledge and make learning enjoyable.<br>Upgrade Your Knowledge: Test your understanding, track your progress, and continuously improve your chemistry skills.<br>Compete and Learn Together: Play with others, share knowledge, and level up your expertise in chemistry!</p>
+                </div>
+            </div>
+        </div>
+    
+      
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="symbol">🧬</div>
+                    <home-page-h4>Periodic Table</home-page-h4>
+                </div>
+                <div class="flip-card-back">
+                    <p>The periodic table, developed by Dmitri Mendeleev in 1869, organizes elements by atomic number and properties.Elements are grouped into metals, nonmetals, and metalloids, and trends such as electronegativity, ionization energy, and atomic radius can be observed.It plays a crucial role in predicting chemical behavior and understanding atomic structure.</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+<br><br><br>
+<div class="container">
+    <div class="Vission">
+           <div class="image-circle">
+            <img src="images/image (4).png" alt="Vision">
+           </div>
+        <h2>Vision</h2>
+        <p>To be a leader in our industry, inspiring positive change and innovation.</p>
+        <a href="#" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="Value">
+        <div class="image-circle">
+            <img src="images/image (4).png" alt="Value">
+        </div>
+        <h2>Value</h2>
+        <p>Integrity, excellence, and community are at the core of everything we do.</p>
+        <a href="#" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="Mission">
+        <div class="image-circle">
+            <img src="images/image (6).png" alt="Mission">
+        </div>
+        <h2>Mission</h2>
+        <p>To provide exceptional services that empower individuals and foster community well-being.</p>
+        <a href="#" class="read-more-btn">Read More</a>
+    </div>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Follow Us</h3>
+                    <ul class="social_icon">
+                        <center>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </center>
+                    </ul>
+
+                    <div class="conta">
+                        <ul>
+                            <center>
+                            <li><i class="fa fa-map-marker"></i> Location: 123 Chemistry Lane, Science City</li>
+                            <li><i class="fa fa-phone"></i> Call:  0812342891</li>
+                            <li><i class="fa fa-envelope"></i> ElementEdge@gmail.com</li>
+                            </center>
+                        </ul>
+                    </div>
+                    <div class="menu_bottom">
+                        <ul>
+                            <center>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="about.html" class="protected-link">About</a></li>
+                            <li><a href="contact.html" class="protected-link">Contact</a></li>
+                            <li><a href="feedback.html" class="protected-link">Feedback</a></li>
+                            </center>
+                        </ul>
+                    </div>
+                  <center> <p>&copy; 2025 Element Edge - All Rights Reserved</p> </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
